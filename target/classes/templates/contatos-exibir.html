@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibir Contato</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+</head>
+<body>
+
+    <div class="container">
+        <h1>Cadastro de Contatos</h1>
+        <h2 th:text="${contatos.nome}"></h2>
+        <h2 th:text="${contatos.email}"></h2>
+        <h2 th:text="${contatos.telefone}"></h2>
+        <a href="/contatos/">Retornar</a>
+    </div> 
+
+    <script src="/js/jquery-3.5.1.slim.min.css"></script>
+    <script src="/js/popper.min.css"></script>
+    <script src="/js/bootstrap.min.css"></script>
+</body>
+</html>

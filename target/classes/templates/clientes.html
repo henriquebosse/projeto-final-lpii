@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Clientes</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />    
+</head>
+<body>
+    <h1>Cadastro de Clientes</h1>
+
+    <div th:if="${lista.size() > 0}">
+        <div class="row m-1" th:each="clientes : ${lista}">
+            <div class="col-6">
+                <a th:href="@{/clientes/exibir/{id}(id=${clientes.id})}" th:text="${clientes.nomeCliente}"></a>
+            </div>
+
+            <div class="col-3">
+                <a class="btn btn-success btn-sm" th:href="@{/clientes/editar/{id}(id=${clientes.id})}">Editar</a>
+            </div>
+
+            <div class="col-3">                       
+                <a class="btn btn-danger btn-sm" th:href="@{/clientes/deletar/{id}(id=${clientes.id})}">Remover</a>
+            </div>            
+        </div>
+    </div>
+
+    <a href="/clientes/clientes-cadastrar/">Cadastrar Novo Cliente</a>
+    <div class="row m-1">
+        <a href="/">Retornar</a>
+    </div>
+</body>
+
+    <script src="/js/jquery-3.5.1.slim.min.css"></script>
+    <script src="/js/popper.min.css"></script>
+    <script src="/js/bootstrap.min.css"></script>
+</html>

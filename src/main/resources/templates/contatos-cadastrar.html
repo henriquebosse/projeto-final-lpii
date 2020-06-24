@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Cadastro de Contatos</h1>
+        <h2>Cadastro</h2>
+
+        <form method="POST" action="/contatos/contatos-cadastrar/">
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input class="form-control" type="text" name="nome" id="nome" th:value="${contatos.nome}"/>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-Mail</label>
+                <input class="form-control" type="email" name="email" id="email" th:value="${contatos.email}" />
+            </div>
+
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input class="form-control" type="text" name="telefone" id="telefone" th:value="${contatos.telefone}" />
+            </div>
+
+            <input type="hidden" name="id" th:value="${contatos.id}" />
+
+            </br>
+            <input class="btn btn-primary" type="submit" value="Enviar" />
+
+        </form>
+    
+    
+        <a href="/contatos-cadastrar/">Retornar</a>
+    </div>    
+
+    <script src="/js/jquery-3.5.1.slim.min.css"></script>
+    <script src="/js/popper.min.css"></script>
+    <script src="/js/bootstrap.min.css"></script>
+</body>
+</html>

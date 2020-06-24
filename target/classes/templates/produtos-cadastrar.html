@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Cadastro de Produtos</h1>
+        <h2>Cadastro</h2>
+
+        <form method="POST" action="/produtos/produtos-cadastrar/">
+            <div class="form-group">
+                <label for="descricao">Descrição</label>
+                <input class="form-control" type="text" name="descricao" id="descricao" th:value="${produtos.descricao}"/>
+            </div>
+
+            <div class="form-group">
+                <label for="grupo">Grupo</label>
+                <input class="form-control" type="grupo" name="grupo" id="grupo" th:value="${produtos.grupo}" />
+            </div>
+
+            <div class="form-group">
+                <label for="aliquota">Alíquota</label>
+                <input class="form-control" type="text" name="aliquota" id="aliquota" th:value="${produtos.aliquota}" />
+            </div>
+
+            <div class="form-group">
+                <label for="precoCusto">Preço Custo</label>
+                <input class="form-control" type="text" name="precoCusto" id="precoCusto" th:value="${produtos.precoCusto}" />
+            </div>
+
+            <div class="form-group">
+                <label for="precoVenda">Preço Venda</label>
+                <input class="form-control" type="text" name="precoVenda" id="precoVenda" th:value="${produtos.precoVenda}" />
+            </div>
+
+            <input type="hidden" name="id" th:value="${produtos.id}" />
+
+            </br>
+            <input class="btn btn-primary" type="submit" value="Enviar" />
+
+        </form>
+    
+    
+        <a href="/produtos-cadastrar/">Retornar</a>
+    </div>    
+
+    <script src="/js/jquery-3.5.1.slim.min.css"></script>
+    <script src="/js/popper.min.css"></script>
+    <script src="/js/bootstrap.min.css"></script>
+</body>
+</html>

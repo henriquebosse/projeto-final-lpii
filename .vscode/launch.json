@@ -1,0 +1,34 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-DemoApplication<contatos-pessoas>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "br.edu.usj.ads.lpii.contatospessoas.DemoApplication",
+            "projectName": "contatos-pessoas",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ContatosApplication<contatos-pessoas>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "br.edu.usj.ads.lpii.contatospessoas.ContatosApplication",
+            "projectName": "contatos-pessoas",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ProjetoFinalLpiiApplication<projeto-final-lpii>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "br.edu.usj.ads.lpii.ProjetoFinalLpii.ProjetoFinalLpiiApplication",
+            "projectName": "projeto-final-lpii",
+            "args": ""
+        }
+    ]
+}
