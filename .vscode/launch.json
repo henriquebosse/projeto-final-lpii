@@ -29,6 +29,16 @@
             "mainClass": "br.edu.usj.ads.lpii.ProjetoFinalLpii.ProjetoFinalLpiiApplication",
             "projectName": "projeto-final-lpii",
             "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ProjetoFinalLpiiApplication<contatos-pessoas>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "br.edu.usj.ads.lpii.ProjetoFinalLpii.ProjetoFinalLpiiApplication",
+            "projectName": "contatos-pessoas",
+            "args": ""
         }
     ]
 }

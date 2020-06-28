@@ -1,4 +1,4 @@
-package br.edu.usj.ads.lpii.ProjetoFinalLpii.Contatos;
+package br.edu.usj.ads.lpii.ProjetoFinalLpii.Classe;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,14 +13,15 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Contatos {
-    
+public class Produtos {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
 
-    String nome;
-    String email;
-    String telefone;
-    
+    String descricao;
+    String grupo;
+    String aliquota;
+    Double precoCusto;
+    Double precoVenda;
+
 }

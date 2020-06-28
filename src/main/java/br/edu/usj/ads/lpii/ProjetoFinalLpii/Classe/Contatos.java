@@ -1,6 +1,4 @@
-package br.edu.usj.ads.lpii.ProjetoFinalLpii.Clientes;
-
-import java.sql.Date;
+package br.edu.usj.ads.lpii.ProjetoFinalLpii.Classe;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,20 +9,18 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
-public class Clientes {
+public class Contatos {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
 
-    String nomeCliente;
-    String endereco;
-    String numero;
-    String bairro;
-    String cidade;
-    Date dtCadastro;
+    String nome;
+    String email;
+    String telefone;
+    
 }

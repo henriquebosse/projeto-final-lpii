@@ -1,4 +1,6 @@
-package br.edu.usj.ads.lpii.ProjetoFinalLpii.Produtos;
+package br.edu.usj.ads.lpii.ProjetoFinalLpii.Classe;
+
+import java.sql.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,19 +11,20 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
-public class Produtos {
+public class Clientes {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
 
-    String descricao;
-    String grupo;
-    String aliquota;
-    Double precoCusto;
-    Double precoVenda;
-
+    String nomeCliente;
+    String endereco;
+    String numero;
+    String bairro;
+    String cidade;
+    Date dtCadastro;
 }

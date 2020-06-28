@@ -1,4 +1,4 @@
-package br.edu.usj.ads.lpii.ProjetoFinalLpii.Clientes;
+package br.edu.usj.ads.lpii.ProjetoFinalLpii.Controller;
 
 import java.util.List;
 
@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+
+import br.edu.usj.ads.lpii.ProjetoFinalLpii.Classe.Clientes;
+import br.edu.usj.ads.lpii.ProjetoFinalLpii.Repository.ClientesRepository;
 
 @Controller
 @ResponseBody
