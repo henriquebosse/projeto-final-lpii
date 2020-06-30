@@ -41,12 +41,16 @@
             <input type="hidden" name="id" th:value="${produtos.id}" />
 
             </br>
-            <input class="btn btn-primary" type="submit" value="Enviar" />
+            <div class="row m-1">
+                <input class="btn btn-success" type="submit" value="Enviar" />
+            </div>
 
         </form>
     
-    
-        <a href="/produtos-cadastrar/">Retornar</a>
+        <div class="row m-1">
+            <input class="btn btn-primary btn-color btn-bg-color btn-sm col-xs-2 margin-left" type="button" onclick="location.href='/produtos/'" value="Retornar">
+        </div>    
+        
     </div>    
 
     <script src="/js/jquery-3.5.1.slim.min.css"></script>

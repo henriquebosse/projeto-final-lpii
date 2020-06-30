@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Clientes</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css" />    
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />   
+    <style>
+        input {
+            margin-right: 5px;
+        }
+    </style> 
 </head>
 <body>
     <h1>Cadastro de Clientes</h1>
@@ -25,9 +30,9 @@
         </div>
     </div>
 
-    <a href="/clientes/clientes-cadastrar/">Cadastrar Novo Cliente</a>
     <div class="row m-1">
-        <a href="/">Retornar</a>
+        <input class="btn btn-primary btn-color btn-bg-color btn-sm col-xs-2 margin-left" type="button" onclick="location.href='/'" value="Retornar">
+        <input class="btn btn-primary btn-color btn-bg-color btn-sm col-xs-2 margin-left" type="button" onclick="location.href='/clientes/clientes-cadastrar/'" value="Novo Cliente">
     </div>
 </body>
 
