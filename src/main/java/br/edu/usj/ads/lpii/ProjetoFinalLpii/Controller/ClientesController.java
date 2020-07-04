@@ -37,7 +37,7 @@ public class ClientesController {
     public ModelAndView getExibir(@PathVariable long id) {
         // Irá exibir os clientes de determinado ID
         Clientes clientes = clientesRepository.findById(id).get();
-        ModelAndView modelAndView = new ModelAndView("exibir");
+        ModelAndView modelAndView = new ModelAndView("clientes-exibir");
         modelAndView.addObject("clientes", clientes);
         return modelAndView;
     }

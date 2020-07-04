@@ -37,7 +37,7 @@ public class ProdutosController {
     public ModelAndView getExibir(@PathVariable long id) {
         // Irá exibir os produtos de determinado ID
         Produtos produtos = produtosRepository.findById(id).get();
-        ModelAndView modelAndView = new ModelAndView("exibir");
+        ModelAndView modelAndView = new ModelAndView("produtos-exibir");
         modelAndView.addObject("produtos", produtos);
         return modelAndView;
     }

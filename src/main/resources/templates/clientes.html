@@ -12,25 +12,30 @@
     </style> 
 </head>
 <body>
-    <h1>Cadastro de Clientes</h1>
-
+    <div class="col-md-8 offset-md-4">
+        <h1>Cadastro de Clientes</h1>
+    </div>
+    
     <div th:if="${lista.size() > 0}">
-        <div class="row m-1" th:each="clientes : ${lista}">
-            <div class="col-6">
-                <a th:href="@{/clientes/exibir/{id}(id=${clientes.id})}" th:text="${clientes.nomeCliente}"></a>
-            </div>
+        <div th:each="clientes : ${lista}">
+            <div class="row">
+                <div class="col-md-4 offset-md-3">
+                    <div class="form-group">
+                        <a th:href="@{/clientes/clientes-exibir/{id}(id=${clientes.id})}" th:text="${clientes.nomeCliente}"></a>
+                    </div>
+                </div>
 
-            <div class="col-3">
-                <a class="btn btn-success btn-sm" th:href="@{/clientes/editar/{id}(id=${clientes.id})}">Editar</a>
-            </div>
-
-            <div class="col-3">                       
-                <a class="btn btn-danger btn-sm" th:href="@{/clientes/deletar/{id}(id=${clientes.id})}">Remover</a>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <a class="btn btn-success btn-sm" th:href="@{/clientes/editar/{id}(id=${clientes.id})}">Editar</a>                   
+                        <a class="btn btn-danger btn-sm" th:href="@{/clientes/deletar/{id}(id=${clientes.id})}">Remover</a>
+                    </div>            
+                </div>                   
             </div>            
         </div>
     </div>
 
-    <div class="row m-1">
+    <div class="col-md-10 offset-md-5">
         <input class="btn btn-primary btn-color btn-bg-color btn-sm col-xs-2 margin-left" type="button" onclick="location.href='/'" value="Retornar">
         <input class="btn btn-primary btn-color btn-bg-color btn-sm col-xs-2 margin-left" type="button" onclick="location.href='/clientes/clientes-cadastrar/'" value="Novo Cliente">
     </div>

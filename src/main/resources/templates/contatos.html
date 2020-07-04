@@ -4,40 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Contatos</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css" />    
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />     
+    <link rel="stylesheet" href="/css/sweetalert.css" />
     <style>
         input {
             margin-right: 5px;
         }
+        
     </style>    
 </head>
 <body>
-    <h1>Cadastro de Contatos</h1>
+    <div class="col-md-8 offset-md-4">
+        <h1>Cadastro de Contatos</h1>
+    </div>
 
     <div th:if="${lista.size() > 0}">
-        <div class="row m-1" th:each="contatos : ${lista}">
-            <div class="col-6">
-                <a th:href="@{/contatos/exibir/{id}(id=${contatos.id})}" th:text="${contatos.nome}"></a>
-            </div>
+        <div th:each="contatos : ${lista}">
+            <div class="row">
+                <div class="col-md-4 offset-md-3">
+                    <div class="form-group">
+                        <a th:href="@{/contatos/contatos-exibir/{id}(id=${contatos.id})}" th:text="${contatos.nome}"></a>
+                    </div>
+                </div>
 
-            <div class="col-3">
-                <a class="btn btn-success btn-sm" th:href="@{/contatos/editar/{id}(id=${contatos.id})}">Editar</a>
-            </div>
-
-            <div class="col-3">                       
-                <a class="btn btn-danger btn-sm" th:href="@{/contatos/deletar/{id}(id=${contatos.id})}">Remover</a>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <a class="btn btn-success btn-sm" th:href="@{/contatos/editar/{id}(id=${contatos.id})}">Editar</a>
+                        <a class="btn btn-danger btn-sm" th:href="@{/contatos/deletar/{id}(id=${contatos.id})}">Remover</a>
+                    </div>            
+                </div>                   
             </div>            
         </div>
     </div>
 
-    <div class="row m-1">
+    <div class="col-md-10 offset-md-5"> 
+              
         <input class="btn btn-primary btn-color btn-bg-color btn-sm col-xs-2 margin-left" type="button" onclick="location.href='/'" value="Retornar">
         <input class="btn btn-primary btn-color btn-bg-color btn-sm col-xs-2 margin-left" type="button" onclick="location.href='/contatos/contatos-cadastrar/'" value="Novo Contato">
     </div>
 
 </body>
 
-    <script src="/js/jquery-3.5.1.slim.min.css"></script>
-    <script src="/js/popper.min.css"></script>
-    <script src="/js/bootstrap.min.css"></script>
+    <script src="/src/main/resources/static/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="/src/main/resources/static/js/popper.min.js"></script>
+    <script src="/src/main/resources/static/js/bootstrap.min.js"></script>
+    <script src="/src/main/resources/static/js/sweetalert.min.css"></script>
 </html>

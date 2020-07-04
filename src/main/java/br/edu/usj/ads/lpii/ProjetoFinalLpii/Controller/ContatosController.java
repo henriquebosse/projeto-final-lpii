@@ -39,7 +39,7 @@ public class ContatosController {
     public ModelAndView getExibir(@PathVariable long id) {
         // Irá exibir os contatos de determinado ID
         Contatos contatos = contatosRepository.findById(id).get();
-        ModelAndView modelAndView = new ModelAndView("exibir");
+        ModelAndView modelAndView = new ModelAndView("contatos-exibir");
         modelAndView.addObject("contatos", contatos);
         return modelAndView;
     }
@@ -49,7 +49,7 @@ public class ContatosController {
         // Retorna o Formulário para o Usuário Preencher
         Contatos contatos = new Contatos();
         ModelAndView modelAndView = new ModelAndView("contatos-cadastrar");
-        modelAndView.addObject("contatos", contatos);
+        modelAndView.addObject("contatos", contatos);      
         return modelAndView;
     }
 

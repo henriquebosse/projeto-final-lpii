@@ -12,27 +12,36 @@
     </style>    
 </head>
 <body>
-    <h1>Cadastro de Produtos</h1>
+    <div class="col-md-8 offset-md-4">
+        <h1>Cadastro de Produtos</h1>
+    </div>
 
+    
     <div th:if="${lista.size() > 0}">
-        <div class="row m-1" th:each="produtos : ${lista}">
-            <div class="col-6">
-                <a th:href="@{/produtos/exibir/{id}(id=${produtos.id})}" th:text="${produtos.descricao}"></a>
+        
+        <div th:each="produtos : ${lista}">
+            <div class="row m-1">   
+                <div class="col-md-4 offset-md-3">
+                    <div class="form-group">
+                        <a th:href="@{/produtos/produtos-exibir/{id}(id=${produtos.id})}" th:text="${produtos.descricao}"></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <a class="btn btn-success btn-sm" th:href="@{/produtos/editar/{id}(id=${produtos.id})}">Editar</a>
+                        <a class="btn btn-danger btn-sm" th:href="@{/produtos/deletar/{id}(id=${produtos.id})}">Remover</a>
+                    </div>            
+                </div>
             </div>
-
-            <div class="col-3">
-                <a class="btn btn-success btn-sm" th:href="@{/produtos/editar/{id}(id=${produtos.id})}">Editar</a>
-            </div>
-
-            <div class="col-3">                       
-                <a class="btn btn-danger btn-sm" th:href="@{/produtos/deletar/{id}(id=${produtos.id})}">Remover</a>
-            </div>            
         </div>
     </div>
 
-    <div class="row m-1">
-        <input class="btn btn-primary btn-color btn-bg-color btn-sm col-xs-2 margin-left" type="button" onclick="location.href='/'" value="Retornar">
-        <input class="btn btn-primary btn-color btn-bg-color btn-sm col-xs-2 margin-left" type="button" onclick="location.href='/produtos/produtos-cadastrar/'" value="Novo Produto">
+    <div class="row">
+        <div class="col-md-10 offset-md-5">
+            <input class="btn btn-primary btn-color btn-bg-color btn-sm col-xs-2 margin-left" type="button" onclick="location.href='/'" value="Retornar">
+            <input class="btn btn-primary btn-color btn-bg-color btn-sm col-xs-2 margin-left" type="button" onclick="location.href='/produtos/produtos-cadastrar/'" value="Novo Produto">
+        </div>
     </div>
 
 </body>
